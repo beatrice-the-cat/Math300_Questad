@@ -1,9 +1,16 @@
-A = [1 2; 3 4];
-B = [5 6; 7 8];
+n=100;
+v = [0];
+for i = 1:n
+v = v + (sin(i/n) * (1/n));
+end
+disp(v);
 
-C1 = A*B;
-C2 = A.*B;
 
-disp(C1);
-
-disp(C2);
+diceone = 0;
+dicetwo = 0;
+while diceone < 6 || dicetwo < 6
+    diceone = randi(6);
+    dicetwo = randi(6);
+end
+disp(diceone);
+disp(dicetwo);
